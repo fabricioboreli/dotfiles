@@ -8,22 +8,34 @@
 # debug
 set -x
 
+# list of files/folders to symlink in homedir, remove an item if you dont wanna install all of them
+files="bashrc vimrc vim"
+
+
 # variables
-dotfiles_dir="~/dotfiles"            # dotfiles directory
-dotfiles_olddir="~/dotfiles_old"     # old dotfiles backup directory
+dotfiles_dir=~/dotfiles            # dotfiles directory
+dotfiles_olddir=~/dotfiles_old     # old dotfiles backup directory
 
-# list of files/folders to symlink in homedir
-files=".bashrc .vimrc .vim"
+# wanna proceed?
+printf "%s\n" "The following configuration files/dirs will be moved to $dosiles_olddir:"
+printf "%s\n" "$files" # | tr -d '.'
+printf "\n%s" "Continue? [s/n]: "
+read answer
 
-# create dotfiles_old in homedir
-mkdir -p $dotfiles_olddir
+if [ $answer != "s" ] ; then
+    printf "%s\n" "aborted."
+    exit 1
+fi
+
+# create dir for the current files
+mkdir -p ~/$dotfiles_olddir
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $dotfiles_olddir"
-    mv ~/$file ~/${dotfiles_olddir}/
+    mv ~/.$file ${dotfiles_olddir}/
     echo "Creating symlink to $file in home directory."
-    ln -s $dotfiles_dir/$file ~/$file
+    ln -s $dotfiles_dir/$file ~/.$file
 done
 
 # source the bashrc file
