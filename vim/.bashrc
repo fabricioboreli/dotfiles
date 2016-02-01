@@ -1,1 +1,0 @@
-/home/ne0h/dotfiles/.bashrc
