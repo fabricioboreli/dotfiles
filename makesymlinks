@@ -6,7 +6,7 @@
 #
 
 # debug
-set -x
+#set -x
 
 # list of files/folders to symlink in homedir, remove an item if you dont wanna install all of them
 files="bashrc vimrc vim"
