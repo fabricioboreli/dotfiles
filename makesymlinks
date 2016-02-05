@@ -9,7 +9,7 @@
 #set -x
 
 # list of files/folders to symlink in homedir, remove an item if you dont wanna install all of them
-files="bashrc vimrc vim"
+files="bashrc vimrc vim Xresources i3"
 
 
 # variables
