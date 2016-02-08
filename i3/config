@@ -175,6 +175,8 @@ bindsym $mod+Ctrl+f exec leafpad
 bindsym $mod+Ctrl+c exec gnome-control-center
 # open icecat browser
 bindsym $mod+Ctrl+i exec ~/local/bin/icecat/icecat
+# open firefox browser
+bindsym $mod+Ctrl+x exec ~/local/bin/firefox/firefox
 # open tor browser
 bindsym $mod+Ctrl+r exec ~/local/bin/tor-browser_en-US/Browser/start-tor-browser --detach
 # open iceweasel browser
@@ -200,7 +202,8 @@ exec export OOO_FORCE_DESKTOP=gnome
 exec sleep 1 && nitrogen --restore &
 exec urxvtd -q -o -f &
 exec udiskie &
-exec owncloud &
+#exec owncloud &
+#exec syncthing &
 
 exec autocutsel -fork &
 exec autocutsel -selection PRIMARY -fork &

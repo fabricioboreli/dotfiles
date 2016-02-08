@@ -2,6 +2,7 @@
 
 #
 # Credits:
+# Parts of this script was inspired by the one found at:
 # http://www.placona.co.uk
 #
 
@@ -31,6 +32,8 @@ fi
 cd ~
 # create dir for the current files
 mkdir -p $dotfiles_olddir
+# create tmp dir for vim config
+mkdir -p .vim/tmp
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
@@ -42,3 +45,11 @@ done
 
 # source the bashrc file
 . ~/.bashrc
+
+# download vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# reminder..
+printf "\n%s\n" "Launch vim and run :PluginInstall"
+
+exit 0
