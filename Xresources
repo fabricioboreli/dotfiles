@@ -13,7 +13,7 @@ URxvt*saveLines: 65535
 URxvt*background: black
 
 ! Font color
-URxvt*foreground: green
+URxvt*foreground: gray90
 
 ! Other colors
 URxvt*color0: black

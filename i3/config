@@ -183,16 +183,18 @@ bindsym $mod+Ctrl+r exec ~/local/bin/tor-browser_en-US/Browser/start-tor-browser
 bindsym $mod+Ctrl+w exec iceweasel
 # open icedove mail client
 bindsym $mod+Ctrl+d exec icedove
+# open pavucontrol (sound)
+bindsym $mod+Ctrl+p exec pavucontrol
 
 ### execs
 exec xrdb -merge ~/.Xresources
-exec eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
-exec export SSH_AUTH_SOCK
-exec export GPG_AGENT_INFO
+#exec eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
+#exec export SSH_AUTH_SOCK
+#exec export GPG_AGENT_INFO
 
-exec export GNOME_KEYRING_CONTROL
-exec export GNOME_KEYRING_PID
-exec export OOO_FORCE_DESKTOP=gnome
+#exec export GNOME_KEYRING_CONTROL
+#exec export GNOME_KEYRING_PID
+#exec export OOO_FORCE_DESKTOP=gnome
 #export LANG="en_US.UTF-8"
 #export LC_ALL="en_US.UTF-8"
 #export LANGUAGE="en_US.UTF-8"
