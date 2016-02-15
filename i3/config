@@ -186,6 +186,7 @@ bindsym $mod+Ctrl+d exec icedove
 # open pavucontrol (sound)
 bindsym $mod+Ctrl+p exec pavucontrol
 
+
 ### execs
 exec xrdb -merge ~/.Xresources
 #exec eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)

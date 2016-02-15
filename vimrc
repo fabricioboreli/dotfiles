@@ -41,7 +41,8 @@ set autoread
 
 set shiftwidth=4 tabstop=4 expandtab
 set dir=~/.vim/tmp backupdir=~/.vim/tmp
-set ignorecase smartcase shiftround smartindent
+set ignorecase smartcase shiftround
+"smartindent
 "set t_Co=256
 set autochdir
 
